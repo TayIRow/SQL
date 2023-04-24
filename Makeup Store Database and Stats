@@ -1,0 +1,51 @@
+--Create a makeup store database
+
+/**makeup store
+Blush
+Powder
+Bronzer
+Lipstick
+Lip liner
+Foundation
+Perfume
+Body Glitter
+Eyelashes
+Eyelash glue
+Eyeliner
+Concealor
+Makeup Brush
+Highlighter
+**/
+
+CREATE TABLE makeup_store (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, rating INTEGER, quantity INTEGER);
+
+INSERT INTO makeup_store VALUES (1, "Blush", 3, 4, 1);
+INSERT INTO makeup_store VALUES (2, "Powder", 4, 5, 1);
+INSERT INTO makeup_store VALUES (3, "Bronzer", 1, 4, 10);
+INSERT INTO makeup_store VALUES (4, "Lipstick", 2, 6,20);
+INSERT INTO makeup_store VALUES (5, "Lip liner", 7, 2, 40);
+INSERT INTO makeup_store VALUES (6, "Foundation", 3, 8, 20);
+INSERT INTO makeup_store VALUES (7, "Perfume", 200, 10, 1);
+INSERT INTO makeup_store VALUES (8, "Body Glitter", 60, 9, 2);
+INSERT INTO makeup_store VALUES (9, "Eyelashes", 10, 10, 5);
+INSERT INTO makeup_store VALUES (10, "Eyelash glue", 1, 10, 2);
+INSERT INTO makeup_store VALUES (11, "Eyeliner", 20, 5, 1);
+INSERT INTO makeup_store VALUES (12, "Concealor", 40, 10, 1);
+INSERT INTO makeup_store VALUES (13, "Makeup Brush", 15, 8, 10);
+INSERT INTO makeup_store VALUES (14, "Highlighter", 60, 9, 1);
+INSERT INTO makeup_store VALUES (15, "Setting Spray", 20, 10, 4);
+
+SELECT * FROM makeup_store;
+
+--Display the database ordered by price
+
+SELECT * FROM makeup_store ORDER BY price;
+
+-- Choose which items are rated by six or greater.
+
+SELECT * FROM makeup_store WHERE rating >= 6 ORDER BY price;
+
+--What is the sum of all of the items in the database?
+
+SELECT SUM(price) FROM makeup_store
+
